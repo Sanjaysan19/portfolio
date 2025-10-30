@@ -2062,7 +2062,7 @@ textarea.form-control {
   box-shadow: 0 0 20px var(--sky-blue-glow);
 }
 
-.back-to-top {
+/* .back-to-top {
   position: fixed;
   bottom: 30px;
   right: 10%;
@@ -2081,9 +2081,9 @@ textarea.form-control {
   z-index: 100;
   border: 2px solid var(--sky-blue-accent);
   animation: floatButton 3s ease-in-out infinite;
-}
+} */
 
-@keyframes floatButton {
+/* @keyframes floatButton {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-10px); }
 }
@@ -2098,7 +2098,7 @@ textarea.form-control {
   transform: translateY(-5px) scale(1.1);
   box-shadow: 0 0 40px var(--sky-blue-glow);
   animation: none;
-}
+} */
 
 /* Responsive Design */
 @media (max-width: 768px) {
