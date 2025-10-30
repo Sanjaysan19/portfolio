@@ -311,6 +311,7 @@ html {
 body {
   margin: 0;
   padding: 0;
+  width:100%;
 }
 
 *,
@@ -910,6 +911,7 @@ body {
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
   position: relative;
+  width:100%;
 }
 
 a {
