@@ -1027,6 +1027,7 @@ ul {
 
 /* Navigation Bar */
 .navbar {
+  width: 100%;
   position: fixed;
   top: 0;
   left: 0;
@@ -1045,7 +1046,7 @@ ul {
 }
 
 .nav-container {
-  max-width: 85%;
+  max-width: 100%;
   margin: 0 auto;
   padding: var(--space-16) var(--space-24);
   display: flex;
@@ -2384,6 +2385,12 @@ html.loading * {
 }
 
 @media (max-width: 480px) {
+  html{
+    width: 100%;
+  }
+  body{
+    width: 100%;
+  }
   .hero {
     padding: 80px 0 var(--space-48);
   }
@@ -2420,5 +2427,81 @@ html.loading * {
   
   .toast-notification {
     top: 80px;
+  }
+}/* =====================================================
+   MOBILE SCREEN FINAL FIXES
+   (SAFE OVERRIDES ONLY – NO DESKTOP IMPACT)
+===================================================== */
+
+@media (max-width: 480px) {
+
+  /* Prevent horizontal scroll */
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* HERO FIX */
+  .hero {
+    min-height: auto; /* FIX huge height */
+    padding: 80px 0 var(--space-48);
+    overflow: visible;
+  }
+
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: var(--space-32);
+    text-align: center;
+  }
+
+  .hero-visual {
+    height: 260px;
+  }
+
+  /* NAV FIX */
+  .nav-close {
+    right: 20px;
+    top: 20px;
+  }
+
+  /* CONTAINER FIX */
+  .container,
+  .hero-container,
+  .nav-container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  /* BUTTON FIX */
+  .hero-buttons {
+    flex-direction: column;
+    gap: var(--space-12);
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+  }
+
+  /* FLOATING BADGES SCALE */
+  .tech-badge {
+    font-size: 12px;
+    padding: var(--space-6) var(--space-12);
+  }
+
+  /* GRID SAFETY */
+  .projects-grid,
+  .skills-grid,
+  .education-cards {
+    grid-template-columns: 1fr;
+  }
+
+  /* BACK TO TOP */
+  .back-to-top {
+    width: 44px;
+    height: 44px;
+    right: 20px;
+    bottom: 20px;
   }
 }
